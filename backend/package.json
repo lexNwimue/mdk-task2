@@ -1,6 +1,24 @@
 {
+  "name": "backend",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Backend for mkd-2 task",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
     "mysql": "^2.18.1",
     "sequelize": "^6.21.4"
-  }
+  },
+  "keywords": [
+    "payment",
+    "airport"
+  ],
+  "author": "lex Nwimue Progress",
+  "license": "ISC"
 }

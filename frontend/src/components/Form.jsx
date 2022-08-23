@@ -1,12 +1,18 @@
-import React from "react";
-// import "../assets/js/script.js";
+import { useState } from "react";
+import { handlePayment } from "../services/handlePayment";
 
 const Form = () => {
+  const [firstAirport, setFirstAirport] = useState("");
+  const [secondAirport, setSecondAirport] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    handlePayment();
+    // setFirstAirport(document.getElementById("airport1").value);
+    // setSecondAirport(document.getElementById("airport2").value);
   };
   return (
-    <div className="row mt-5">
+    <div className="row mt-5 mb-5">
       <form
         autoComplete="off"
         onSubmit={handleSubmit}
@@ -15,9 +21,10 @@ const Form = () => {
       >
         <div className="autocomplete">
           <input
-            id="myInput"
+            id="airport1"
             type="text"
-            name="myCountry"
+            name="airport1"
+            className="form-control basicAutoComplete"
             placeholder="Select Airport"
             style={{ width: "500px" }}
           />
@@ -32,11 +39,12 @@ const Form = () => {
       >
         <div className="autocomplete">
           <input
-            id="airportInput"
+            id="airport1"
             type="text"
-            name="myCountry"
+            name="airport1"
             placeholder="Select Airport"
             style={{ width: "500px" }}
+            className="form-control basicAutoComplete"
           />
         </div>
         <input type="submit" />
